@@ -1,0 +1,44 @@
+.a1 img{
+    width: 800px;
+    height: 500px;
+}
+.a2 img{
+    width: 500px;
+    height: 500px;
+}
+.a3 img{
+    width: 800px;
+    height: 500px;
+}
+h4{
+    font-size: 20px;
+}
+
+.p2 img{
+    width: 500px;
+    height:500px;
+   
+}
+nav{
+    background-color:purple;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+ul,li,h1{
+    display: inline;
+}
+ul{
+    margin-left: 60%;
+}
+li{
+    margin-left: 10px;
+    cursor: pointer;
+   
+}
+a{
+    color: white;
+}
+a:hover{
+    color: pink;
+}
