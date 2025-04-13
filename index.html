@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <link rel="stylesheet" href="assests/css/style1.css">
+    <link rel="stylesheet" href="assests/css/cursor.css">
     
 </head>
 <body style="background: linear-gradient(to right, #f3e5ff, #d8b4fe)";>
@@ -37,9 +38,35 @@
         <img src="assests/images/image.jpg" alt="Photo">
     </div >
   
-        
-    
+    <script>
+        const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff']; // Dark purples with glow
+      
+        document.addEventListener('mousemove', (e) => {
+          const dot = document.createElement('div');
+          dot.className = 'cursor-dot';
+      
+          // Position adjusted for scroll
+          const x = e.clientX + window.scrollX;
+          const y = e.clientY + window.scrollY;
+      
+          dot.style.left = `${x}px`;
+          dot.style.top = `${y}px`;
+      
+          // Color from palette
+          const color = colors[Math.floor(Math.random() * colors.length)];
+          dot.style.backgroundColor = color;
+          dot.style.color = color; // for box-shadow glow
+      
+          document.body.appendChild(dot);
+      
+          // Remove after animation
+          setTimeout(() => {
+            dot.remove();
+          }, 1000);
+        });
+      </script>
+  
+   
    
 </body>
 </html>
-    
