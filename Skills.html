@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assests/css/skills.css">
+    <link rel="stylesheet" href="assests/css/cursor.css">
 </head>
 <body style="background: linear-gradient(to right, #f3e5ff, #d8b4fe)";>
    
@@ -25,20 +26,43 @@
          
         </div>
    
-    <div class="skill">
-        <ul>
-        <li><img src="assests/images/c++.png" alt="C++"></li>
-        <li><img src="assests/images/java1.webp" alt="java"></li>
-        <li><img src="assests/images/html.webp" alt="html"></li>
-        <li><img src="assests/images/css.png" alt="">css</li>
-    </ul>
-    </div>
-    
+        <div class="skill">
+            <ul>
+              <li data-title="C++"><img src="assests/images/c++.png" alt="C++" /></li>
+              <li data-title="Java"><img src="assests/images/java1.webp" alt="Java" /></li>
+              <li data-title="HTML"><img src="assests/images/html.webp" alt="HTML" /></li>
+              <li data-title="CSS"><img src="assests/images/css.png" alt="CSS" />css</li>
+            </ul>
+          </div>
    
    
-    
-      
+          <script>
+            const colors = ['#3d005e', '#51007a', '#6f00a8', '#8000c9', '#9b00ff']; // Dark purples with glow
+          
+            document.addEventListener('mousemove', (e) => {
+              const dot = document.createElement('div');
+              dot.className = 'cursor-dot';
+          
+              // Position adjusted for scroll
+              const x = e.clientX + window.scrollX;
+              const y = e.clientY + window.scrollY;
+          
+              dot.style.left = `${x}px`;
+              dot.style.top = `${y}px`;
+          
+              // Color from palette
+              const color = colors[Math.floor(Math.random() * colors.length)];
+              dot.style.backgroundColor = color;
+              dot.style.color = color; // for box-shadow glow
+          
+              document.body.appendChild(dot);
+          
+              // Remove after animation
+              setTimeout(() => {
+                dot.remove();
+              }, 1000);
+            });
+          </script>
    
 </body>
 </html>
-            
