@@ -144,3 +144,99 @@ span {
     transform: scale(1.05);
     box-shadow: 0 0 25px rgba(147, 112, 219, 0.7), 0 0 40px rgba(128, 0, 128, 0.5);
 }
+/* ======== Responsive Design for Mobile ======== */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  nav ul {
+    margin: 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  .content {
+    width: 90%;
+    margin: 120px auto 40px;
+    text-align: center;
+    height: auto;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .image {
+    position: static;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .icon {
+    font-size: 30px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .project-container {
+    padding: 20px;
+  }
+
+  .video-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .project-details {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .project-details h2 {
+    font-size: 24px;
+  }
+
+  .project-details p {
+    font-size: 16px;
+  }
+
+  .nav h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .back-button {
+    font-size: 16px;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+}
+
